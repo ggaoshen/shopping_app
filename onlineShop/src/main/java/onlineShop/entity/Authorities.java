@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 
-@Entity
+@Entity // 把java class创建成一个表
 @Table(name = "authorities")
 public class Authorities implements Serializable {
 
