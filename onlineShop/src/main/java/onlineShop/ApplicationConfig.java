@@ -12,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc; // 让spr
 @EnableWebMvc
 public class ApplicationConfig {
 
-    @Bean(name = "sessionFactory")
+    @Bean(name = "sessionFactory") // external的class初始化的时候就需要用@Bean，不是自己写的代码初始化用这个方法
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource()); // get credential

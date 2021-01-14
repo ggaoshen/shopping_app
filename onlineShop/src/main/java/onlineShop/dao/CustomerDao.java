@@ -19,7 +19,7 @@ public class CustomerDao {
 
     public void addCustomer(Customer customer) {
         Authorities authorities = new Authorities();
-        authorities.setAuthorities("ROLE_USER");
+        authorities.setAuthorities("ROLE_USER"); // 设置权限
         authorities.setEmailId(customer.getUser().getEmailId());
         Session session = null;
 

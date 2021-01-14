@@ -2,10 +2,14 @@ onlineShop/entity/ShippingAddress.class
 onlineShop/entity/CartItem.class
 onlineShop/entity/BillingAddress.class
 onlineShop/entity/SalesOrder.class
-onlineShop/entity/Authorities.class
+onlineShop/controller/HomePageController.class
 onlineShop/entity/User.class
 onlineShop/ApplicationConfig.class
-onlineShop/entity/Customer.class
 onlineShop/Application.class
 onlineShop/entity/Cart.class
 onlineShop/entity/Product.class
+onlineShop/service/CustomerService.class
+onlineShop/entity/Authorities.class
+onlineShop/entity/Customer.class
+onlineShop/dao/CustomerDao.class
+onlineShop/controller/RegistrationController.class
