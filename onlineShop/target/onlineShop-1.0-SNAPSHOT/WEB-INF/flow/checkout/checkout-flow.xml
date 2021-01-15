@@ -14,11 +14,13 @@
  
     <view-state id="collectCustomerInfo" view="collectCustomerInfo.jsp" model="order">
         <transition on="customerInfoCollected" to="collectShippingDetail" />
+        <!--collectCustomerInfo.jsp第84行，提交之后trigger一个event:
+        "_eventId_customerInfoCollected", 这时就会to到collectShippingDetail这个view-state-->
     </view-state>
 
     <view-state id="collectShippingDetail" view="collectShippingDetail.jsp" model="order">
         <transition on="shippingDetailCollected" to="orderConfirmation" />
-        <transition on="backToCollectCustomerInfo" to="collectCustomerInfo" />
+        <transition on="backToCollectCustomerInfo" to="collectCustomerInfo" /> <!--回退-->
     </view-state>
 
      <view-state id="orderConfirmation" view = "orderConfirmation.jsp"> 
