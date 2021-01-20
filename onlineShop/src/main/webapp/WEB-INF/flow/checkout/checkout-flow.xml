@@ -4,8 +4,10 @@
       xsi:schemaLocation="http://www.springframework.org/schema/webflow
 						  http://www.springframework.org/schema/webflow/spring-webflow.xsd">
 
+    <!--SalesOrder这个object是用来储存数据的，存在内存里-->
     <var name="order" class="onlineShop.entity.SalesOrder" />
-    
+
+    <!--默认从第一个state开始执行-->
     <action-state id="addCartToOrder">
         <evaluate expression="cartDao.validate(requestParameters.cartId)" result="order.cart" />
         <transition to="invalidCartWarning" on-exception="java.io.IOException" />

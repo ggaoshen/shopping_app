@@ -36,10 +36,11 @@ public class CartItemDao {
 
             CartItem cartItem = session.get(CartItem.class, cartItemId);
             Cart cart = cartItem.getCart();
-            cart.getCartItem().remove(cartItem); // 需要把cartItem从购物车中删除
+            cart.getCartItem().remove(cartItem); // 需要把cartItem从Cart中删除
+            // 相当于删除cart表中cartItem外键
 
             session.beginTransaction();
-            session.delete(cartItem);
+            session.delete(cartItem); // 在cartItem表中删除cartItem record
             session.getTransaction().commit();
 
         } catch (Exception ex) {
