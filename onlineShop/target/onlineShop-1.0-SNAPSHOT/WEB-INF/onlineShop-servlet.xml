@@ -10,11 +10,12 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<mvc:annotation-driven></mvc:annotation-driven>
+	<mvc:annotation-driven></mvc:annotation-driven> <!--SPRING使用@annotation-->
 
 	<context:component-scan base-package="onlineShop"></context:component-scan>
+	<!--scan哪里来建object-->
 
-	<!-- Using this it get the actual view name by converting logical view name -->
+	<!-- Using this to get the actual view name by converting logical view name -->
 	<!-- for eg: logical view name is welcome -->
 	<!-- it will convert it to WEB-INF/Views/welcome.jsp -->
 
